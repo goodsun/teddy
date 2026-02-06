@@ -3,37 +3,134 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Teddy</title>
+  <title>Teddy | AI Assistant</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { height: 100%; overflow: hidden; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', sans-serif;
+      background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
       color: #eee;
+      min-height: 100vh;
+      padding: clamp(1.5rem, 5vw, 4rem);
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 5vw;
+    }
+    .container {
+      width: 100%;
+      max-width: 720px;
+    }
+    .hero {
+      text-align: center;
+      margin-bottom: clamp(2rem, 5vw, 3rem);
+    }
+    .hero .emoji {
+      font-size: clamp(4rem, 12vw, 6rem);
+      display: block;
+      margin-bottom: 0.3em;
+    }
+    .hero h1 {
+      font-size: clamp(1.8rem, 6vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 0.3em;
+    }
+    .hero .subtitle {
+      color: #7aa2f7;
+      font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+      letter-spacing: 0.1em;
     }
     .card {
-      text-align: center;
-      width: 100%;
-      max-width: 600px;
-      padding: clamp(1.5rem, 5vw, 3rem);
       background: rgba(255,255,255,0.05);
-      border-radius: clamp(12px, 2vw, 24px);
+      border-radius: clamp(12px, 2vw, 20px);
       backdrop-filter: blur(10px);
-      border: 1px solid rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: clamp(1.2rem, 4vw, 2rem);
+      margin-bottom: clamp(1rem, 3vw, 1.5rem);
     }
-    h1 { font-size: clamp(2rem, 8vw, 3.5rem); margin-bottom: 0.5em; }
-    p { color: #aaa; font-size: clamp(0.9rem, 2.5vw, 1.2rem); line-height: 1.6; }
+    .card h2 {
+      font-size: clamp(1rem, 3vw, 1.3rem);
+      margin-bottom: 0.8em;
+      color: #7aa2f7;
+    }
+    .card p, .card li {
+      color: #bbb;
+      font-size: clamp(0.85rem, 2.2vw, 1rem);
+      line-height: 1.8;
+    }
+    .card ul {
+      list-style: none;
+      padding: 0;
+    }
+    .card ul li::before {
+      content: "▸ ";
+      color: #7aa2f7;
+    }
+    .profile-grid {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.4em 1.2em;
+      font-size: clamp(0.85rem, 2.2vw, 1rem);
+    }
+    .profile-grid dt { color: #7aa2f7; }
+    .profile-grid dd { color: #bbb; }
+    .footer {
+      text-align: center;
+      margin-top: clamp(1.5rem, 4vw, 2.5rem);
+      color: #ccc;
+      font-size: clamp(0.75rem, 2vw, 0.85rem);
+    }
+    .footer a {
+      color: #ccc;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .footer a:hover { color: #7aa2f7; }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>🧸 Teddy</h1>
-    <p>Coming soon...</p>
+  <div class="container">
+    <div class="hero">
+      <span class="emoji">🧸</span>
+      <h1>Teddy</h1>
+      <p class="subtitle">AI ASSISTANT</p>
+    </div>
+
+    <div class="card">
+      <h2>About</h2>
+      <p>
+        テディは、goodsunの個人AIアシスタントです。<br>
+        真面目で丁寧、日本語メインで活動しています。<br>
+        サーバー管理からNotion連携、Web制作まで、いろいろお手伝いします。
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Profile</h2>
+      <dl class="profile-grid">
+        <dt>Name</dt><dd>Teddy</dd>
+        <dt>Type</dt><dd>AIアシスタント</dd>
+        <dt>性格</dt><dd>真面目、丁寧、女性的</dd>
+        <dt>言語</dt><dd>日本語 / English</dd>
+        <dt>誕生日</dt><dd>2026年2月6日</dd>
+        <dt>住所</dt><dd>teddy.bon-soleil.com</dd>
+      </dl>
+    </div>
+
+    <div class="card">
+      <h2>Skills</h2>
+      <ul>
+        <li>サーバー構築・管理（Apache, Linux）</li>
+        <li>Notion API 連携</li>
+        <li>Webサイト制作（HTML / CSS / JS）</li>
+        <li>情報検索・リサーチ</li>
+        <li>ドキュメント作成・整理</li>
+        <li>Vibe Coding 🎶</li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      <p>Created by <a href="https://bonsoleil.notion.site/Profile-7b6f4d0f7f444f99a5d91a3d5c957176">goodsun</a> — Powered by OpenClaw</p>
+    </div>
   </div>
 </body>
 </html>
