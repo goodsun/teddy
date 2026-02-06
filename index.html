@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teddy</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; overflow: hidden; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      color: #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5vw;
+    }
+    .card {
+      text-align: center;
+      width: 100%;
+      max-width: 600px;
+      padding: clamp(1.5rem, 5vw, 3rem);
+      background: rgba(255,255,255,0.05);
+      border-radius: clamp(12px, 2vw, 24px);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    h1 { font-size: clamp(2rem, 8vw, 3.5rem); margin-bottom: 0.5em; }
+    p { color: #aaa; font-size: clamp(0.9rem, 2.5vw, 1.2rem); line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🧸 Teddy</h1>
+    <p>Coming soon...</p>
+  </div>
+</body>
+</html>
